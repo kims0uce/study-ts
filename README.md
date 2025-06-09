@@ -6,3 +6,5 @@
 [04. 차세대 자바스크립트와 TypeScript](https://github.com/kims0uce/study-ts/wiki/04.-%EC%B0%A8%EC%84%B8%EB%8C%80-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%99%80-TypeScript)
 
 [05. 클래스 & 인터페이스](https://github.com/kims0uce/study-ts/wiki/05.-%ED%81%B4%EB%9E%98%EC%8A%A4-&-%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4)
+
+[06. 고급타입]([https://github.com/kims0uce/study-ts/wiki](https://github.com/kims0uce/study-ts/wiki/06.-%EA%B3%A0%EA%B8%89%ED%83%80%EC%9E%85))
