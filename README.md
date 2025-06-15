@@ -8,3 +8,5 @@
 [05. 클래스 & 인터페이스](https://github.com/kims0uce/study-ts/wiki/05.-%ED%81%B4%EB%9E%98%EC%8A%A4-&-%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4)
 
 [06. 고급타입](https://github.com/kims0uce/study-ts/wiki/06.-%EA%B3%A0%EA%B8%89%ED%83%80%EC%9E%85)
+
+[07. 제네릭](https://github.com/kims0uce/study-ts/wiki/07.-%EC%A0%9C%EB%84%A4%EB%A6%AD)
