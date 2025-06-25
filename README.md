@@ -10,3 +10,5 @@
 [06. 고급타입](https://github.com/kims0uce/study-ts/wiki/06.-%EA%B3%A0%EA%B8%89%ED%83%80%EC%9E%85)
 
 [07. 제네릭](https://github.com/kims0uce/study-ts/wiki/07.-%EC%A0%9C%EB%84%A4%EB%A6%AD)
+
+[08. 데코레이터](https://github.com/kims0uce/study-ts/wiki/08.-%EB%8D%B0%EC%BD%94%EB%A0%88%EC%9D%B4%ED%84%B0)
