@@ -8,17 +8,38 @@ const searchAddressHandler = (event: Event) => {
   event.preventDefault();
   const enteredAddress = addressIntput.value;
 
+  // ts가 응답타입을 예상할 수 있도록 함
+  type GoogleGeocodingResponse = {
+    results: { geometry: { location: { lat: number; lng: number } } }[];
+    status: "OK" | "ZERO_RESULTS";
+  };
+
   // send this to Google api
   // 서드파티 쓰기 싫으면 fetch 사용 가능
   // ts 프로젝트에서 axios 사용해보기
   axios
-    .get(
+    .get<GoogleGeocodingResponse>(
       `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURI(
         enteredAddress
       )}&key=${GOOGLE_API_KEY}`
     )
     .then((res) => {
-      console.log(res);
+      if (res.data.status !== "OK") {
+        throw new Error("Could not fetch location!");
+      }
+      const coordinates = res.data.results[0].geometry.location;
+      console.log(coordinates);
+      const map = new google.maps.Map(
+        document.getElementById("map")! as HTMLElement,
+        {
+          center: coordinates,
+          zoom: 8,
+        }
+      );
+      new google.maps.Marker({
+        map: map,
+        position: coordinates,
+      });
     })
     .catch((err) => {
       console.log(err);

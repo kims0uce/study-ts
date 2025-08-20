@@ -1,5 +1,8 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const webpack = require("webpack");
+require("dotenv").config();
 
 module.exports = {
   mode: "development",
@@ -8,6 +11,7 @@ module.exports = {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
     publicPath: "/",
+    clean: true,
   },
   module: {
     rules: [
@@ -16,6 +20,10 @@ module.exports = {
         use: "ts-loader",
         exclude: /node_modules/,
       },
+      {
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
+      },
     ],
   },
   resolve: {
@@ -23,7 +31,10 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "index.html",
+      template: "/index.html", // public/index.html 사용
+    }),
+    new webpack.DefinePlugin({
+      "process.env.GOOGLE_API": JSON.stringify(process.env.GOOGLE_API),
     }),
   ],
   devServer: {
